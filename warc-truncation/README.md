@@ -9,4 +9,4 @@ The truncation is required to keep the crawl archives at a limited size and ensu
 The notebooks in this folder analyze various aspects of payload truncation:
 - [cc-main-2018-43-single-warc-file.ipynb] - truncation counts for a single WARC file of CC-MAIN-2018-43 and a broken marking of truncated records
 - [cc-main-2019-35-100-warc-files.ipynb] - marking of truncated records has been fixed for CC-MAIN-2019-35 and 100 randomly selected WARC files are analyzed to verify the marking and get more detailed metrics
-
+- [cc-main-2019-47-truncation-by-mime-type.ipynb] - since November 2019 (CC-MAIN-2019-47) truncated records are marked in the URL indexes which allows to analyze distribution of truncated records over the entire monthly crawl
