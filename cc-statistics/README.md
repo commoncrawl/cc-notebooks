@@ -10,12 +10,19 @@ Python environment (3.x)
 
 Jupyter Notebook
 
+Java 11 (or upwards)
+
 ### Quick Start
+
+First as mentioned, [Java](https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html#zz-6.) is needed. Follow the instructions here based on the operating system you are running on. After following each step, invoking `java --version` in your command line should return the version of your Java. Once this is working you may proceed!
+
+Next, we can go ahead by downloading and installing the [WebGraph framework](http://webgraph.di.unimi.it/) by running the `./install_webgraph.sh` script provided in the repo. We have another script, `webgraph_config.sh` which provides some shell variables for the `install_webgraph.sh`. 
+
 Clone the [cc-webgraph](https://github.com/commoncrawl/cc-webgraph) repository and run the java tools with `mvn package`. 
 
 You may then clone this repository in the `cc-webgraph` root, or choose your own location. If you choose your own location please keep in mind to update any variables related to pathing.
 
-One this repository is cloned, we may now start working with the web graph.
+Once this repository is cloned, we may now start working with the web graph.
 
 
 To download the graph, we run
@@ -24,11 +31,11 @@ To download the graph, we run
 for f in cc-main-2020-feb-mar-may-domain-t.graph cc-main-2020-feb-mar-may-domain-t.properties \
          cc-main-2020-feb-mar-may-domain.graph cc-main-2020-feb-mar-may-domain.properties \
          cc-main-2020-feb-mar-may-domain.stats \
-         cc-main-2020-feb-mar-may-domain-edges.txt.gz; do
+        cc-main-2020-feb-mar-may-domain-vertices.txt.gz; do
    aws --no-sign-request s3 cp s3://commoncrawl/projects/hyperlinkgraph/cc-main-2020-feb-mar-may/domain/$f .;
 done
 ```
-This will download a representation of the domain level graph (`cc-main-2020-feb-mar-may-domain.graph`), a file that contains useful properties of said graph (`cc-main-2020-feb-mar-may-domain.properties`) such as the WebGraph class the graph is, number of nodes, etc, a file that contains more statistics about the graph (`cc-main-2020-feb-mar-may-domain.stats`) such as min indegree/outdegrees, number of dangling nodes, etc, and a file that represents the edges in the graph (`cc-main-2020-feb-mar-may-domain-edges.txt.gz`). Transpose of the graph is also downloaded (which is any file name that ends with `-t`). More information can be found on the [blog](https://commoncrawl.org/2020/06/host-and-domain-level-web-graphs-febmarmay-2020/).
+This will download a representation of the domain level graph (`cc-main-2020-feb-mar-may-domain.graph`), a file that contains useful properties of said graph (`cc-main-2020-feb-mar-may-domain.properties`) which is required to load the graph, a file that contains more statistics about the graph (`cc-main-2020-feb-mar-may-domain.stats`) such as min indegree/outdegrees, number of dangling nodes, etc, and a file that represents the vertices in the graph (`cc-main-2020-feb-mar-may-domain-vertices.txt.gz`). Transpose of the graph is also downloaded (which is any file name that ends with `-t`). More information can be found on the [blog](https://commoncrawl.org/2020/06/host-and-domain-level-web-graphs-febmarmay-2020/).
 
 Now, in order to more easily run our WebGraph java commands, we define the variable:
 ```
@@ -58,7 +65,7 @@ $WG it.unimi.dsi.webgraph.Stats --save-degrees cc-main-2020-feb-mar-may-domain
 ```
 The --save-degrees flag generates `*.outdegrees` and `*.indegrees`  files which contain number of degrees per node (so the first line of the outdegrees file contains the number of outdegrees that node of id 0). `*.outdegree` and `*.indegree` files will be generated which contains frequency distribution of degrees (so line 0 of .indegree contains the number of nodes with 0 incoming edges). Also, if connected component files are present, Stats will genenerate some information about the connected components. More information about the [Stats class](http://webgraph.di.unimi.it/docs/it/unimi/dsi/webgraph/Stats.html).
 
-You are now ready to run the notebook! Simply load it and take a look. Double check any variables with pathing.
+You are now ready to run the [notebook](https://github.com/commoncrawl/cc-notebooks/blob/statistics/cc-statistics/topology_stats.ipynb)! Simply load it and take a look. Double check any variables with pathing.
 
 
 ### Notebook
@@ -196,7 +203,6 @@ pyWebGraph console, Copyright (C) 2009 Massimo Santini
 
 ...
 
-
 678: #89622268 us.pingpong
 
 679: #89702797 us.zillman
@@ -225,4 +231,6 @@ https://github.com/commoncrawl/cc-webgraph
 http://webgraph.di.unimi.it/
 
 http://law.di.unimi.it/tutorial.php
+
+http://webdatacommons.org/hyperlinkgraph/2012-08/topology.html
 
