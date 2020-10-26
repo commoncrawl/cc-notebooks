@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The goal of this repo is to allow users to easily and interactively view statistics about the Common Crawl data set.
+The goal of this repo is to give users the capabilities to view statistics about the Common Crawl webgraph data sets and interactively explore the graphs.
 
 ### Requirements
 
@@ -93,7 +93,7 @@ Python (2.x)
 
 
 #### Rebuilding String maps
-In order to get pyWebGraph working we need to (rebuild the string maps)[http://law.di.unimi.it/tutorial.php].
+In order to get pyWebGraph working we need to [rebuild the string maps](http://law.di.unimi.it/tutorial.php).
 Following the above steps to get the notebook started, you should have a vertices file (cc-main-2020-feb-mar-may-domain-vertices-domain.txt.gz) which contains a mapping from a node id to a reversed domain name. We however need to attain a mapping from reversed domain name to numbers. To achieve this we will use the (minimal perfect hashing algorithm)[http://sux4j.di.unimi.it/docs/it/unimi/dsi/sux4j/mph/package-summary.html]. 
 
 Running the following command will produce a `mph` (minimal perfect hash) file that contains mapping from reversed domain name to number.
@@ -152,7 +152,7 @@ Defining the Web Graph version (which is visible by the directory name of webgra
 
 We will now define the class path for the webgraph package by running:
 
-`WG_CP=$DIR/webgraph-$WEBGRAPH_VERSION.jar:$(ls $DIR/deps/*.jar | tr '\n' ':')`
+`WG_CP="java -cp target/cc-webgraph-0.1-SNAPSHOT-jar-with-dependencies.jar"`
 
 Note for Windows users, the seperator for class paths is `;` rather than `:`. This means that this command will become:
 
@@ -174,7 +174,6 @@ pyWebGraph console, Copyright (C) 2009 Massimo Santini
 >> graph ./output_dir/cc-main-2020-feb-mar-may-domain
 
 >> pwn
-
 #0 
 
 >> namemaps ./output_dir/cc-main-2020-feb-mar-may-domain
@@ -182,50 +181,29 @@ pyWebGraph console, Copyright (C) 2009 Massimo Santini
 >> cn "org.commoncrawl"
 
 >> pwn
-
 #76320850 org.commoncrawl
 
 >> ls
-
 0: #1143797 au.com.dejanseo
-
 1: #1644111 au.com.spatialsource
-
 2: #2474905 be.youtu
-
 ...
-
 195: #87060356 uk.co.bbc
-
 196: #89576687 us.lumeno
 
 >> sl
 0: #69452 ai.botxo
-
 1: #74455 ai.kritikalvision
-
 ...
-
 678: #89622268 us.pingpong
-
 679: #89702797 us.zillman
-
 680: #89834247 vn.avnuc
-
 681: #90129490 wiki.sysadmin
-
 682: #90203492 work.yokonoji
-
 ```
 
 We can see that we are now able to interact with the graph in a very seamless manner!
 
-
-### FAQ
-
-Common Errors:
-
-- For Windows users the `run_webgraph.sh` file from `cc-webgraph` may not work due to Windows/Linux syntatical differences. See the Windows-friendly `run_webgraph.sh` script attached in this repo.
 
 
 ### Resources
