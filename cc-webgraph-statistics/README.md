@@ -68,7 +68,7 @@ $WG it.unimi.dsi.webgraph.Stats --save-degrees cc-main-2020-feb-mar-may-domain
 ```
 The --save-degrees flag generates `*.outdegrees` and `*.indegrees`  files which contain number of degrees per node (so the first line of the outdegrees file contains the number of outdegrees that node of id 0). `*.outdegree` and `*.indegree` files will be generated which contains frequency distribution of degrees (so line 0 of .indegree contains the number of nodes with 0 incoming edges). Also, if connected component files are present, Stats will genenerate some information about the connected components. More information about the [Stats class](http://webgraph.di.unimi.it/docs/it/unimi/dsi/webgraph/Stats.html).
 
-You are now ready to run the [notebook](https://github.com/commoncrawl/cc-notebooks/blob/statistics/cc-statistics/topology_stats.ipynb)! Simply load it and take a look. Double check any variables with pathing.
+You are now ready to run the [notebook](topology_stats.ipynb)! Simply load it and take a look. Double check any variables with pathing.
 
 
 ### Notebook
