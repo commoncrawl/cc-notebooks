@@ -16,14 +16,21 @@ Java 11 (or upwards)
 
 First as mentioned, [Java](https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html#zz-6.) is needed. Follow the instructions here based on the operating system you are running on. After following each step, invoking `java --version` in your command line should return the version of your Java. Once this is working you may proceed!
 
-Next, we can go ahead by downloading and installing the [WebGraph framework](http://webgraph.di.unimi.it/) by running the `./install_webgraph.sh` script provided in the repo. We have another script, `webgraph_config.sh` which provides some shell variables for the `install_webgraph.sh`. 
 
-Clone the [cc-webgraph](https://github.com/commoncrawl/cc-webgraph) repository and run the java tools with `mvn package`. 
+Clone the [cc-webgraph](https://github.com/commoncrawl/cc-webgraph) repository and run the java tools with `mvn package`. This maven package includes all of the packages we need, such as the [WebGraph framework](http://webgraph.di.unimi.it/). Now, we may run all of our java commands with 
+
+```
+java -cp target/cc-webgraph-0.1-SNAPSHOT-jar-with-dependencies.jar <classname> <args>...
+```
+
+Now, in order to more easily run our WebGraph java commands, we define the variable:
+```
+WG="java -cp target/cc-webgraph-0.1-SNAPSHOT-jar-with-dependencies.jar"
+```
 
 You may then clone this repository in the `cc-webgraph` root, or choose your own location. If you choose your own location please keep in mind to update any variables related to pathing.
 
 Once this repository is cloned, we may now start working with the web graph.
-
 
 To download the graph, we run
 
@@ -37,10 +44,6 @@ done
 ```
 This will download a representation of the domain level graph (`cc-main-2020-feb-mar-may-domain.graph`), a file that contains useful properties of said graph (`cc-main-2020-feb-mar-may-domain.properties`) which is required to load the graph, a file that contains more statistics about the graph (`cc-main-2020-feb-mar-may-domain.stats`) such as min indegree/outdegrees, number of dangling nodes, etc, and a file that represents the vertices in the graph (`cc-main-2020-feb-mar-may-domain-vertices.txt.gz`). Transpose of the graph is also downloaded (which is any file name that ends with `-t`). More information can be found on the [blog](https://commoncrawl.org/2020/06/host-and-domain-level-web-graphs-febmarmay-2020/).
 
-Now, in order to more easily run our WebGraph java commands, we define the variable:
-```
-WG="cc-webgraph/src/script/webgraph_ranking/run_webgraph.sh"
-```
 
 Once this is defined, we may generate offset files for the graph and the transpose graph:
 ```
