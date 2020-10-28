@@ -34,7 +34,7 @@ The purpose of this section is to give users some perspective on certain aspects
 
 ### Interactive web graph
 
-The interface for interacting with the webgraph is done by using [pyWebGraph](https://pythonhosted.org/pyWebGraph/">pyWebGraph), a front end that interfaces Jython with WebGraph. First, before using this interface we must [re-build the string maps](http://law.di.unimi.it/tutorial.php), in order to create a mapping between the node ID (a numerical value), to domain name (and vice versa). Once this is established we are able to simply load up the graph into pyWebGraph, and you will be able to traverse the graph interactively. This is all covered in the seperate [document](interactive_webgraph.md).
+The interface for interacting with the webgraph is done by using [pyWebGraph](https://pythonhosted.org/pyWebGraph), a front end that interfaces Jython with WebGraph. First, before using this interface we must [re-build the string maps](http://law.di.unimi.it/tutorial.php), in order to create a mapping between the node ID (a numerical value), to domain name (and vice versa). Once this is established we are able to simply load up the graph into pyWebGraph, and you will be able to traverse the graph interactively. This is all covered in the seperate [document](interactive_webgraph.md).
 
 ### Resources
 https://github.com/commoncrawl/cc-webgraph
