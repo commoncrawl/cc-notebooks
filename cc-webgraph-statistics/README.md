@@ -32,6 +32,10 @@ You are now ready to run the [notebook](topology_stats.ipynb)! Simply load it an
 
 The purpose of this section is to give users some perspective on certain aspects of the web graph, by visualizing them with `pandas` and `matplotlib`. Together in the [notebook](topology_stats.ipynb), we will be analyzing the indegree/outdegree frequency distribution of the graph, as well as metrics related to the connected components that appear. This was largely inspired by a [document](http://webdatacommons.org/hyperlinkgraph/2012-08/topology.html) developed by University of Mannheim.
 
+### Interactive web graph
+
+The interface for interacting with the webgraph is done by using [pyWebGraph](https://pythonhosted.org/pyWebGraph/">pyWebGraph), a front end that interfaces Jython with WebGraph. First, before using this interface we must [re-build the string maps](http://law.di.unimi.it/tutorial.php), in order to create a mapping between the node ID (a numerical value), to domain name (and vice versa). Once this is established we are able to simply load up the graph into pyWebGraph, and you will be able to traverse the graph interactively. This is all covered in the seperate [document](interactive_webgraph.md).
+
 ### Resources
 https://github.com/commoncrawl/cc-webgraph
 

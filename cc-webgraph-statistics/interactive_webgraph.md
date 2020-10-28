@@ -6,9 +6,14 @@ Another interesting tool that you may look into is [pyWebGraph](https://github.c
 ### Requirements
 
 Python (2.x)
+Web graph files
+Java 11 (or upwards)
 
 ### Quick Start
 
+#### Web graph files
+
+In order to interact with the web graph, we need to ensure that certain files exist. Follow the steps displayed in the primary [notebook](topology_stats.ipynb) first, up to the "Interactive web graph" section.
 
 #### Rebuilding String maps
 In order to get pyWebGraph working we need to [rebuild the string maps](http://law.di.unimi.it/tutorial.php).
