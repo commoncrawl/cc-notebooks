@@ -37,6 +37,7 @@ You can now create the cluster, which will take several minutes to set up and bo
 Now that your cluster is up and running, you will need to create an EMR Notebook. Simply click on the "notebooks" tab on the left, create a notebook and attach the cluster you just created.
 Now your AWS EMR Cluster and notebook are all set up and ready to go! In the notebook you have on EMR, you can replicate the [notebook](./aws_emr_notebook.ipynb) provided in the repo (which is simply there to provide the code and explanation, running this locally will not work unless you have a PySpark kernel on your environment).
 
+Further, we will explore how to actually process the resulting parquet files in the [dataframe analysis](dataframe_analysis.ipynb) notebook!
 
 ### Maintenance tips
 
