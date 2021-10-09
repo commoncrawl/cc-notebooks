@@ -1,4 +1,4 @@
-# Common Crawl statistics notebooks
+# Common Crawl webgraph statistics notebooks
 
 ### Introduction
 
