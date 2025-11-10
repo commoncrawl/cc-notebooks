@@ -11,3 +11,4 @@
   - verify that all truncated payloads are annotated by the [WARC-Truncated header](https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.1/#warc-truncated)
   - which MIME types are mostly affected by truncation? Aggregations using the columnar index.
 
+* a [notebook version](https://github.com/commoncrawl/whirlwind-python-notebook) of our introductory whirlwind python tour *(external repository)*
