@@ -6,10 +6,10 @@ Currently, the hosting of Common Crawl data on Hugging Face is experimental, i.e
 
 Notebooks:
 
-- cc-index-hf.ipynb
-- s3-hf.ipynb
-- warcio-hf.ipynb
-- cdxt-hf.ipynb (TODO)
+- [cc-index-hf.ipynb](cc-index-hf.ipynb): Common Crawl's URL Index via Hugging Face
+- [s3-hf.ipynb](s3-hf.ipynb): Using Common Crawl data via Hugging Face's S3-compatible gateway
+- [warcio-hf.ipynb](warcio-hf.ipynb): Reading WARC files from Hugging Face
+- [cdxt-hf.ipynb](cdxt-hf.ipynb) Querying CDX files from Hugging Face (CURRENTLY NOT POSSIBLE DUE TO MISSING CDX FILES)
 
 See also:
 
