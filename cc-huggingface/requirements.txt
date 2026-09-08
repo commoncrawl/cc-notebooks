@@ -1,0 +1,5 @@
+warcio[all]
+huggingface_hub
+duckdb
+jupyter
+ipywidgets

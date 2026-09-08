@@ -12,3 +12,4 @@
   - which MIME types are mostly affected by truncation? Aggregations using the columnar index.
 
 * a [notebook version](https://github.com/commoncrawl/whirlwind-python-notebook) of our introductory whirlwind python tour *(external repository)*
+* various examples [on how to use Common Crawl via Hugging Face](./cc-huggingface/README.md)
